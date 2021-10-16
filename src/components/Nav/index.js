@@ -1,5 +1,12 @@
-function Nav() {
-    
+function Nav(props) {
+    const {
+        portfolioSelected,
+        setPortfolioSelected,
+        resumeSelected,
+        setResumeSelected,
+        contactSelected,
+        setContactSelected
+    } = props
     return (
         <header className="flex-row px-1">
             <h2>
@@ -10,22 +17,38 @@ function Nav() {
             <nav>
                 <ul className="flex-row">
                     <li className="mx-2">
-                        <a href="#about">
+                        <a href="#about" onClick={() => {
+                            setContactSelected(false);
+                            setPortfolioSelected(false);
+                            setResumeSelected(false);
+                        }}>
                             About Me
                         </a>
                     </li>
-                    <li className="mx-2">
-                        <a href="#portfolio">
+                    <li className={`mx-2 ${portfolioSelected && 'navActive'}`}>
+                        <a href="#portfolio" onClick={() => {
+                            setPortfolioSelected(true);
+                            setContactSelected(false);
+                            setResumeSelected(false);
+                        }}>
                             Portfolio
                         </a>
                     </li>
-                    <li className="mx-2">
-                        <a href="#contact">
+                    <li className={`mx-2 ${contactSelected && 'navActive'}`}>
+                        <a href="#contact" onClick={() => {
+                            setContactSelected(true); 
+                            setPortfolioSelected(false);
+                            setResumeSelected(false);
+                        }}>
                             Contact
                         </a>
                     </li>
-                    <li className="mx-2">
-                        <a href="#resume">
+                    <li className={`mx-2 ${resumeSelected && 'navActive'}`}>
+                        <a href="#resume" onClick={() => {
+                            setResumeSelected(true);
+                            setPortfolioSelected(false);
+                            setContactSelected(false);
+                        }}>
                             Resume
                         </a>
                     </li>
