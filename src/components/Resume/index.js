@@ -2,7 +2,7 @@ function Resume() {
     return (
         <section>
             <h1>Resume</h1>
-            <a href="">Download my resume (coming soon)</a>
+            <a href="../../assets/Thomas Bewell's Resume.pdf" download>Download my resume</a>
 
             <h3>Proficiencies:</h3>
             <ul>
