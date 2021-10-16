@@ -131,8 +131,8 @@ textarea {
   padding: 5px;
 }
 
-footer {
-  width: 780px;
+footer a {
+  padding: 20px;
 }
 
 img {
