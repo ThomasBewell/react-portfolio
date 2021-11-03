@@ -4,6 +4,7 @@ import techBlog from '../../assets/techblog-screenshot.png'
 import budgetTracker from '../../assets/budgettracker-screenshot.png'
 import weatherDashboard from '../../assets/weatherdashboard-screenshot.png'
 import passwordGenerator from '../../assets/passwordgenerator-screenshot.png'
+import bookends from '../../assets/bookends-screenshot.png'
 
 function Portfolio() {
     return (
@@ -11,6 +12,18 @@ function Portfolio() {
             <h1>Portfolio</h1>
 
             <div className="container">
+                <div className="px-5 my-2 flex-row">
+                    <h2>Book-Ends</h2>
+                    <a href="https://gentle-retreat-13978.herokuapp.com/" target="_blank" rel='noreferrer'>
+                        <h3>
+                            <a href="https://github.com/jeffywk/book-ends" target='_blank' rel='noreferrer'>
+                                GitHub Repository
+                            </a>
+                        </h3>
+                        <img src={bookends} alt='book-ends screenshot'></img>
+                    </a>
+                </div>
+            
                 <div className="px-5 my-2 flex-row">
                     <h2>Mood Tracker</h2>
                     <a href="https://zimmermanc6588.github.io/mood-tracker/" target="_blank" rel='noreferrer'>
